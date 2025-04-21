@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lari Cosméticos | A Beleza Reconecta</title>
+    <meta name="description" content="Produtos de beleza premium em Brusque - SC">
+    
+    <!-- Pré-carregar recursos críticos -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap">
+</head>
+<body class="bg-primary text-white font-sans">
+    <!-- Cursor Personalizado -->
+    <div id="custom-cursor" class="fixed w-8 h-8 rounded-full border-2 border-pink-300 pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 mix-blend-difference"></div>
+    
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-primary z-50 flex items-center justify-center">
+        <div class="loader animate-spin rounded-full h-16 w-16 border-t-4 border-pink-300"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full z-40 transition-all duration-500">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="logo-group flex items-center">
+                <span class="text-3xl font-serif font-bold text-pink-300">LARI</span>
+                <span class="ml-2 text-xl uppercase tracking-widest">COSMÉTICOS</span>
+            </a>
+            
+            <!-- Navegação Desktop -->
+            <nav class="hidden lg:flex space-x-8">
+                <a href="#home" class="nav-link relative text-white hover:text-pink-300 transition">Início</a>
+                <a href="#products" class="nav-link relative text-white hover:text-pink-300 transition">Produtos</a>
+                <a href="#about" class="nav-link relative text-white hover:text-pink-300 transition">Sobre</a>
+                <a href="#contact" class="nav-link relative text-white hover:text-pink-300 transition">Contato</a>
+            </nav>
+            
+            <!-- Ícone Menu Mobile -->
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-primary-dark bg-opacity-95 backdrop-blur-sm">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-6">
+                <a href="#home" class="nav-link text-2xl text-white hover:text-pink-300 py-2">Início</a>
+                <a href="#products" class="nav-link text-2xl text-white hover:text-pink-300 py-2">Produtos</a>
+                <a href="#about" class="nav-link text-2xl text-white hover:text-pink-300 py-2">Sobre</a>
+                <a href="#contact" class="nav-link text-2xl text-white hover:text-pink-300 py-2">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção Hero -->
+        <section id="home" class="hero-section min-h-screen relative overflow-hidden pt-24">
+            <div class="absolute inset-0 bg-gradient-to-b from-primary-dark to-primary opacity-90"></div>
+            
+            <!-- Elementos de Fundo Flutuantes -->
+            <div class="floating-elements">
+                <div class="floating-circle circle-1"></div>
+                <div class="floating-circle circle-2"></div>
+                <div class="floating-diamond"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 h-full flex items-center relative z-10">
+                <div class="hero-content max-w-2xl">
+                    <h1 class="hero-title text-5xl md:text-7xl font-serif font-bold leading-tight mb-6">
+                        <span class="text-pink-300">A beleza</span> reconecta
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white opacity-90 mb-10">
+                        Descubra a essência da beleza autêntica com nossos produtos exclusivos.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#products" class="btn-primary px-8 py-4 rounded-full font-medium transition-all transform hover:scale-105">
+                            Nossos Produtos
+                        </a>
+                        <a href="#contact" class="btn-secondary px-8 py-4 rounded-full font-medium transition-all transform hover:scale-105">
+                            Agende uma Visita
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+                <a href="#products" class="text-white hover:text-pink-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção Produtos -->
+        <section id="products" class="py-20 bg-primary-dark relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-4xl md:text-5xl font-serif font-bold mb-6">
+                        Nossos <span class="text-pink-300">Produtos</span>
+                    </h2>
+                    <p class="max-w-2xl mx-auto text-lg opacity-90">
+                        Seleção premium de cosméticos para realçar sua beleza natural
+                    </p>
+                </div>
+                
+                <!-- Filtros -->
+                <div class="filters flex justify-center flex-wrap gap-3 mb-12">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="maquiagem">Maquiagem</button>
+                    <button class="filter-btn" data-filter="skincare">Skincare</button>
+                    <button class="filter-btn" data-filter="perfumaria">Perfumaria</button>
+                </div>
+                
+                <!-- Grid de Produtos -->
+                <div class="products-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Produtos serão injetados via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="about" class="py-20 bg-primary">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2 relative">
+                        <div class="about-image-wrap transform hover:rotate-1 transition duration-500">
+                            <img src="images/about.jpg" alt="Sobre Lari Cosméticos" class="rounded-lg shadow-2xl w-full">
+                            <div class="absolute -inset-4 border-2 border-pink-300 rounded-lg z-0 opacity-30 hover:opacity-60 transition duration-500"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                       
