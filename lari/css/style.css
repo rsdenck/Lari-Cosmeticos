@@ -1,0 +1,240 @@
+/* Variáveis de Cor */
+:root {
+    --roxo-escuro: #3A0C5A;
+    --rosa-destaque: #FF6B9D;
+    --branco: #FFFFFF;
+    --cinza-claro: #F5F5F5;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Base */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--roxo-escuro);
+    background: var(--branco);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Luxuoso */
+.header {
+    background: var(--branco);
+    box-shadow: var(--sombra);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem 0;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo-highlight {
+    color: var(--rosa-destaque);
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--roxo-escuro);
+    position: relative;
+    font-weight: 600;
+}
+
+.nav-link.active {
+    color: var(--rosa-destaque);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--rosa-destaque);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section (Sem Imagem) */
+.hero {
+    background: linear-gradient(135deg, var(--roxo-escuro), #5A2D7A);
+    color: var(--branco);
+    padding: 12rem 0 8rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-title span {
+    color: var(--rosa-destaque);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--rosa-destaque);
+    color: var(--branco);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button.outline {
+    background: transparent;
+    border: 2px solid var(--branco);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 107, 157, 0.3);
+}
+
+/* Seção Produtos */
+.products {
+    padding: 6rem 0;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title span {
+    color: var(--rosa-destaque);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: var(--branco);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-fake-image {
+    width: 100%;
+    height: 200px;
+    background-color: var(--color);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-link {
+    color: var(--rosa-destaque);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .nav {
+        display: none; /* Menu mobile pode ser adicionado depois */
+    }
+}
+/* Seção Contato */
+.contact {
+    padding: 6rem 0;
+    background: var(--cinza-claro);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    background: var(--branco);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.contact-card h3 {
+    color: var(--roxo-escuro);
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    margin-bottom: 1.5rem;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    transition: transform 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+}
+
+.map-link {
+    display: block;
+    color: var(--rosa-destaque);
+    margin-top: 1rem;
+    font-weight: 600;
+}
